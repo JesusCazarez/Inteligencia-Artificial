@@ -1,5 +1,12 @@
-# Inteligencia-Artificial
-Integrantes del equipo
+   INSTITUTO TECNOLOGICO NACIONAL DE MEXICO
 
-Cazarez Lara Kevin Jesus
-Aqguilar Felix Jesus Antonio
+INSTITUTO TECNOLOGICO NACIONAL CAMPUS CULIACAN
+          
+          INTELIGENCIA ARTIFICIAL
+                HORA: 11-12
+
+                
+           INTEGRANTES DEL EQUIPO:
+         AQUILAR FELIX JESUS ANTONIO
+          CAZAREZ LARA KEVIN JESUS
+
