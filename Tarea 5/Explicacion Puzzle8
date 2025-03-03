@@ -1,0 +1,149 @@
+Explicación del Código del Puzzle 8
+Clase Principal: Puzzle8
+
+Esta clase es la ventana principal del juego. Hereda de JFrame y contiene todos los componentes gráficos y la lógica del juego.
+
+Atributos de la Clase
+1.	botones (JButton[][]):
+o	Matriz de botones que representan las casillas del tablero.
+o	Cada botón muestra un número o está vacío (representado por VACIO).
+2.	tablero (int[][]):
+o	Matriz de enteros que almacena el estado actual del tablero.
+o	Los valores van del 0 al 8, donde 0 representa el espacio vacío.
+3.	VACIO (int):
+o	Constante que representa el espacio vacío en el tablero (valor 0).
+4.	contadorMovimientos (int):
+o	Lleva la cuenta de los movimientos realizados para resolver el puzzle.
+5.	etiquetaMovimientos (JLabel):
+o	Etiqueta que muestra el número de movimientos realizados.
+6.	panelJuego (JPanel):
+o	Panel que contiene los botones del tablero.
+7.	botonResolver (JButton):
+o	Botón que inicia la resolución automática del puzzle.
+8.	botonReiniciar (JButton):
+o	Botón que reinicia el tablero a un estado inicial válido.
+9.	botonConfigurar (JButton):
+o	Botón que permite al usuario configurar manualmente el tablero.
+
+
+Métodos de la Clase
+
+1. Puzzle8() (Constructor)
+•	Función: Inicializa la ventana del juego y todos sus componentes.
+•	Detalles:
+o	Configura el título, tamaño y comportamiento de cierre de la ventana.
+o	Inicializa los componentes gráficos (etiquetas, botones, paneles).
+o	Llama a inicializarTablero() para generar un tablero inicial válido.
+o	Hace visible la ventana.
+2. inicializarTablero()
+
+•	Función: Genera un tablero inicial válido y lo muestra en la interfaz.
+•	Detalles:
+o	Crea un arreglo con los números del 1 al 8 y el espacio vacío (0).
+o	Mezcla el arreglo hasta que se obtiene una configuración resoluble.
+o	Asigna los valores del arreglo a la matriz tablero y a los botones.
+o	Reinicia el contador de movimientos y actualiza la interfaz.
+3. configurarTablero()
+
+•	Función: Permite al usuario configurar manualmente el tablero.
+•	Detalles:
+o	Muestra un cuadro de diálogo con campos de texto para ingresar los números del tablero.
+o	Valida que los números ingresados sean válidos (del 0 al 8, sin repeticiones).
+o	Si el tablero es válido, lo asigna a la matriz tablero y actualiza la interfaz.
+
+4. reiniciarTablero()
+•	Función: Reinicia el tablero a un estado inicial válido.
+•	Detalles:
+o	Limpia el panel de juego y llama a inicializarTablero() para generar un nuevo tablero.
+o	Actualiza la interfaz.
+
+
+5. esResoluble(int[] numeros)
+•	Función: Verifica si un arreglo de números representa un tablero resoluble.
+•	Detalles:
+o	Cuenta el número de inversiones (pares de números donde uno precede a otro menor que él).
+o	Un tablero es resoluble si el número de inversiones es par.
+o	Ejemplo: En [1, 2, 3, 4, 5, 6, 8, 7, 0], hay 1 inversión (8 > 7), por lo que no es resoluble.
+
+6. esResoluble(int[][] tablero)
+•	Función: Verifica si la matriz tablero es resoluble.
+•	Detalles:
+o	Convierte la matriz en un arreglo y llama a esResoluble(int[] numeros).
+
+7. mezclarArray(int[] array)
+•	Función: Mezcla un arreglo de números de forma aleatoria.
+•	Detalles:
+o	Usa el algoritmo de Fisher-Yates para mezclar el arreglo.
+
+8. actualizarBotones()
+•	Función: Actualiza los botones del tablero según el estado actual de la matriz tablero.
+•	Detalles:
+o	Recorre la matriz tablero y asigna los valores a los botones.
+o	Actualiza la etiqueta de movimientos.
+
+9. resolverPuzzle()
+•	Función: Resuelve el puzzle automáticamente usando el algoritmo A*.
+•	Detalles:
+o	Llama a calcularSolucion() para obtener la secuencia de movimientos.
+o	Si se encuentra una solución, actualiza el tablero paso a paso con un retardo de 500 ms.
+o	Muestra un mensaje cuando el puzzle está resuelto.
+
+10. calcularSolucion()
+•	Función: Implementa el algoritmo A* para encontrar la solución del puzzle.
+•	Detalles:
+o	Usa una cola de prioridad (PriorityQueue) para expandir los nodos con menor costo primero.
+o	Cada nodo representa un estado del tablero, su costo y su heurística.
+o	Explora los movimientos válidos desde cada estado y los agrega a la cola.
+o	Si encuentra un estado objetivo, reconstruye el camino hasta la solución.
+
+11. heuristica(int[][] estado)
+•	Función: Calcula la heurística (distancia estimada) de un estado del tablero.
+•	Detalles:
+o	Usa la distancia Manhattan: suma las distancias horizontales y verticales de cada número a su posición objetivo.
+o	Ejemplo: Si el número 1 está en la posición (0, 0) y debería estar en (0, 1), su distancia es 1.
+
+12. esObjetivo(int[][] estado)
+•	Función: Verifica si un estado del tablero es el estado objetivo.
+•	Detalles:
+o	El estado objetivo es [[1, 2, 3], [4, 5, 6], [7, 8, 0]].
+o	Recorre la matriz y compara cada valor con su posición esperada.
+
+13. obtenerMovimientos(int[][] estado)
+•	Función: Genera todos los movimientos válidos desde un estado dado.
+•	Detalles:
+o	Encuentra la posición del espacio vacío (0).
+o	Genera nuevos estados intercambiando el espacio vacío con sus vecinos (arriba, abajo, izquierda, derecha).
+o	Devuelve una lista de estados válidos.
+
+14. reconstruirCamino(Nodo nodo)
+•	Función: Reconstruye el camino desde un nodo hasta el estado inicial.
+•	Detalles:
+o	Recorre los nodos padres hasta llegar al estado inicial.
+o	Devuelve una lista de estados que representan la solución.
+
+15. Clase Nodo
+•	Función: Representa un nodo en el algoritmo A*.
+•	Atributos:
+o	estado: Matriz que representa el estado del tablero.
+o	padre: Nodo padre en el camino de la solución.
+o	costo: Costo acumulado hasta este nodo.
+o	heuristica: Valor heurístico del nodo.
+•	Detalles:
+o	Se usa en la cola de prioridad para expandir los nodos con menor costo primero.
+
+
+Flujo del Programa
+1.	Inicialización:
+o	Se crea la ventana y se genera un tablero inicial válido.
+o	El usuario puede configurar el tablero manualmente o reiniciarlo.
+
+2.	Resolución:
+o	Si el tablero es resoluble, se inicia el algoritmo A*.
+o	El algoritmo explora los estados del tablero hasta encontrar la solución.
+o	La solución se muestra paso a paso en la interfaz.
+
+3.	Finalización:
+o	Cuando el puzzle está resuelto, se muestra un mensaje con el número de movimientos.
+
+
+
