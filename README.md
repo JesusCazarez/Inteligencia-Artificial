@@ -8,8 +8,7 @@
         <h2>INTEGRANTES DEL EQUIPO</h2>
         <p>AQUILAR FELIX JESUS ANTONIO</p>
         <p>CAZAREZ LARA KEVIN JESUS</p>
-    </div>
-
+ 
     <h2> Unidad 1</h2>
     <nav>
         <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Tarea1">Tarea 1</a></li>
@@ -22,7 +21,6 @@
 
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%202">Unidad 2</a></li>
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%202/Tarea%201">Tarea 1</a>/li>
-
-
+   </div>
 </body>
 </html>
