@@ -24,7 +24,7 @@
     <h2>Unidad 3</h2>
     <nav>
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%203/Tarea1">Tarea 1</a></li>
-    <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%203/Tarea%202">Tarea 2</a></li>
+    <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%203/Tarea2">Tarea 2</a></li>
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%203/Tarea%203">Tarea 3</a></li>
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad%203/Tarea%204">Tarea 4</a></li>
     </nav>
