@@ -1,10 +1,4 @@
-"""
-Sistema Experto para Diagnóstico de Fallas Vehiculares - Versión Simplificada
-Este programa implementa un sistema experto básico para diagnosticar fallas vehiculares
-utilizando una interfaz gráfica simple y un motor de inferencia basado en reglas.
 
-VERSIÓN CORREGIDA: Permite seleccionar síntomas y características simultáneamente.
-"""
 
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
