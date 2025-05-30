@@ -1,0 +1,27 @@
+REPORTE DE CLASIFICACIÓN - RECONOCIMIENTO DE EMOCIONES
+============================================================
+
+              precision    recall  f1-score   support
+
+        Asco       1.00      0.94      0.97       130
+   Desprecio       1.00      0.93      0.96        40
+     Enojado       0.85      0.94      0.89        99
+       Feliz       1.00      0.98      0.99       124
+       Miedo       0.95      0.95      0.95        55
+     Neutral       0.93      0.94      0.93       237
+    Sorpresa       0.99      0.99      0.99       133
+      Triste       0.87      0.87      0.87        62
+
+    accuracy                           0.95       880
+   macro avg       0.95      0.94      0.94       880
+weighted avg       0.95      0.95      0.95       880
+
+
+MÉTRICAS GENERALES:
+- Precisión Global: 0.9466 (94.66%)
+- Macro Avg Precision: 0.9475
+- Macro Avg Recall: 0.9405
+- Macro Avg F1-Score: 0.9434
+- Weighted Avg Precision: 0.9485
+- Weighted Avg Recall: 0.9466
+- Weighted Avg F1-Score: 0.9471
