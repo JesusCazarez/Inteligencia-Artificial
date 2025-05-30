@@ -31,5 +31,7 @@
     <h2>Unidad 4</h2>
     <nav>
     <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad4/Tarea%201">Tarea 1</a></li>
+    <li><a href="https://github.com/JesusCazarez/Inteligencia-Artificial/tree/main/Unidad4/Tarea%202">Tarea 2</a></li>
+    
 </body>
 </html>
